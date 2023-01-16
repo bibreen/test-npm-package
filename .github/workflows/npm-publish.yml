@@ -3,9 +3,13 @@
 
 name: Node.js Package
 
+# on:
+#  release:
+#    types: [created]
+
 on:
-  release:
-    types: [created]
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -31,7 +35,7 @@ jobs:
           scope: "@bibreen"
       - run: npm ci
       # 문서에는 아래의 문장이 없어도 될 것 같았는데...
-      - run: echo @bibreen:registry=https://npm.pkg.github.com/ >> .npmrc
+      # - run: echo @bibreen:registry=https://npm.pkg.github.com/ >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
