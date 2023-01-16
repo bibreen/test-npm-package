@@ -30,6 +30,8 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: "@bibreen"
       - run: npm ci
+      # 문서에는 아래의 문장이 없어도 될 것 같았는데...
+      echo @bibreen:registry=https://npm.pkg.github.com/ >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
