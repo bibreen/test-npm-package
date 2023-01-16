@@ -1,6 +1,6 @@
 {
   "name": "@bibreen/test-npm-package",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "My first npm package",
   "main": "index.js",
   "scripts": {
