@@ -26,6 +26,6 @@
     "pluralize": "^8.0.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@bibreen"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
